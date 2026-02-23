@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mood Recipe App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-pink-50 min-h-screen flex items-center justify-center">
+
+  <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md">
+    <h1 class="text-2xl font-bold mb-6 text-center">Mood Recipe 🍽️</h1>
+
+    <select id="moodSelect" class="w-full p-2 border rounded mb-4">
+      <option value="">Select your mood</option>
+      <option value="happy">Happy</option>
+      <option value="sad">Sad</option>
+      <option value="adventurous">Adventurous</option>
+    </select>
+
+    <button onclick="getRecipe()" 
+      class="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600">
+      Get Recipe
+    </button>
+
+    <div id="recipeCard" class="mt-6 hidden">
+      <h2 id="recipeName" class="text-xl font-semibold"></h2>
+      <p class="mt-2"><strong>Ingredients:</strong></p>
+      <p id="ingredients"></p>
+      <p class="mt-2"><strong>Instructions:</strong></p>
+      <p id="instructions"></p>
+
+      <button onclick="getRecipe()" 
+        class="mt-4 w-full bg-gray-200 p-2 rounded hover:bg-gray-300">
+        Give Me Another
+      </button>
+    </div>
+
+    <p id="errorMsg" class="text-red-500 mt-4 text-center"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
